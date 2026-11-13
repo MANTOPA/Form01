@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Latihan Soal Setting Access Point TP-Link</title>
+<style>
+:root{--bg:#f6fbfb;--card:#fff;--ink:#2a3038;--mute:#5f6b76;--line:#d5e4e6;--a:#0b6a94;--a2:#13a9bb;--mint:#d2f5e8;--ok:#0e7a4f;--okbg:#dff5ea;--bad:#b3261e;--badbg:#fde8e6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#10181c;--card:#182329;--ink:#e8eef0;--mute:#9fb0b8;--line:#2a3a42;--a:#59c3e6;--a2:#2fc4d4;--mint:#173a34;--ok:#6fe0ac;--okbg:#14382b;--bad:#ff9a92;--badbg:#42201d}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#10181c;--card:#182329;--ink:#e8eef0;--mute:#9fb0b8;--line:#2a3a42;--a:#59c3e6;--a2:#2fc4d4;--mint:#173a34;--ok:#6fe0ac;--okbg:#14382b;--bad:#ff9a92;--badbg:#42201d}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 Arial,Helvetica,"Liberation Sans",sans-serif}
+main{max-width:720px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:1.7rem;line-height:1.2;margin:8px 0 6px}
+h1 span{color:var(--a)}
+h2{font-size:1.25rem;margin:36px 0 4px;padding-bottom:6px;border-bottom:3px solid var(--a2)}
+.sub,.hint{color:var(--mute);margin:0 0 14px}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding:8px 0;z-index:5;font-size:.95rem;color:var(--mute);display:flex;justify-content:space-between;align-items:center}
+.bar i{display:block;height:6px;border-radius:3px;background:var(--line);flex:1;margin-left:12px;overflow:hidden}
+.bar b{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--a2),var(--a));transition:width .2s}
+.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px;margin:12px 0}
+.q p{margin:0 0 8px;font-weight:700}
+.q.ok{border-color:var(--ok)}.q.no{border-color:var(--bad)}
+label.o{display:flex;gap:10px;align-items:flex-start;padding:10px;margin:4px 0;border:1px solid var(--line);border-radius:8px;cursor:pointer;min-height:44px}
+label.o:has(input:checked){background:var(--mint);border-color:var(--a2)}
+label.o input{margin-top:4px;width:18px;height:18px;accent-color:var(--a)}
+.tf{display:flex;gap:8px}.tf label.o{flex:1;justify-content:center;font-weight:700}
+input[type=text]{width:100%;font:inherit;padding:11px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);min-height:44px}
+input:focus-visible,button:focus-visible,label.o:focus-within{outline:3px solid var(--a2);outline-offset:2px}
+button{font:inherit;font-weight:700;border:0;border-radius:10px;padding:14px 20px;min-height:48px;background:var(--a);color:#fff;cursor:pointer;width:100%}
+button.g{background:transparent;color:var(--a);border:2px solid var(--a);margin-top:10px}
+:root[data-theme="dark"] button:not(.g){color:#06232e}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) button:not(.g){color:#06232e}}
+.fb{margin:8px 0 2px;padding:8px 10px;border-radius:8px;font-size:.95rem}
+.fb.ok{background:var(--okbg);color:var(--ok)}.fb.no{background:var(--badbg);color:var(--bad)}
+#res{display:none;background:var(--card);border:2px solid var(--a2);border-radius:14px;padding:20px;margin:20px 0;text-align:center}
+#res .n{font-size:3.4rem;font-weight:700;line-height:1;color:var(--a)}
+#res table{margin:14px auto 0;border-collapse:collapse;width:100%;max-width:360px}
+#res td{padding:6px 4px;border-top:1px solid var(--line);text-align:left}#res td:last-child{text-align:right;font-weight:700}
+#warn{color:var(--bad);min-height:1.5em;margin:10px 0 0;text-align:center}
+
+.st{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:16px 0}
+.st label.f{display:block;font-weight:700;margin:0 0 6px}
+.st .tf{margin:8px 0 16px}
+#top{margin:16px 0 0;padding:0;list-style:none;text-align:left}#top li{padding:6px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between}
+</style>
+</head>
+<body>
+<main>
+<h1>Latihan Soal<br><span>Setting Access Point TP-Link</span></h1>
+<form id="st" class="st">
+ <label class="f" for="nm">Nama kamu</label>
+ <input type="text" id="nm" maxlength="40" required autocomplete="name">
+ <p class="f" style="margin:16px 0 0;font-weight:700">Jumlah soal</p>
+ <div class="tf">
+  <label class="o"><input type="radio" name="n" value="10" checked><span>10 soal</span></label>
+  <label class="o"><input type="radio" name="n" value="15"><span>15 soal</span></label>
+  <label class="o"><input type="radio" name="n" value="30"><span>30 soal</span></label>
+ </div>
+ <button>Mulai</button>
+ <p id="er" style="color:var(--bad)"></p>
+</form>
+<div id="quiz" hidden>
+ <div class="bar"><span id="cnt"></span><i><b id="pg"></b></i></div>
+ <div id="app"></div>
+ <p id="warn" role="alert"></p>
+ <button id="go">Lihat nilai</button>
+</div>
+<section id="res" aria-live="polite"></section>
+</main>
+<script>
+const L="ABCD",$=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+let Q=[],N=0,NAME="";
+async function api(url,opt){const r=await fetch(url,opt);const d=await r.json();if(!r.ok)throw new Error(d.error||"Terjadi kesalahan");return d}
+$("#st").onsubmit=async e=>{
+ e.preventDefault();NAME=$("#nm").value.trim();N=+document.querySelector("[name=n]:checked").value;$("#er").textContent="";
+ try{Q=await api("api.php?action=questions&n="+N)}catch(x){$("#er").textContent=x.message;return}
+ $("#app").innerHTML=Q.map((q,i)=>`<div class="q" id="q${q.id}"><p>${i+1}. ${esc(q.t)}</p>`+q.o.map((o,j)=>`<label class="o"><input type="radio" name="q${q.id}" value="${j}"><span>${L[j]}. ${esc(o)}</span></label>`).join("")+'<div class="r"></div></div>').join("");
+ $("#st").hidden=true;$("#quiz").hidden=false;$("#res").style.display="none";count();scrollTo({top:0});
+};
+function count(){const n=Q.filter(q=>document.querySelector(`[name=q${q.id}]:checked`)).length;$("#cnt").textContent=n+" / "+N+" terjawab";$("#pg").style.width=(n/N*100)+"%";return n}
+$("#app").addEventListener("input",()=>{count();$("#warn").textContent=""});
+$("#go").onclick=async()=>{
+ const left=N-count();
+ if(left&&!confirm(left+" soal belum dijawab dan dihitung salah. Lihat nilai sekarang?"))return;
+ const answers={};Q.forEach(q=>{const c=document.querySelector(`[name=q${q.id}]:checked`);if(c)answers[q.id]=+c.value});
+ $("#go").disabled=true;
+ try{
+  const d=await api("api.php?action=grade",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:NAME,n:N,answers})});
+  const bad=Object.fromEntries(d.wrong.map(w=>[w.id,w.a]));
+  Q.forEach(q=>{const el=$("#q"+q.id),ok=!(q.id in bad);el.className="q "+(ok?"ok":"no");el.querySelector(".r").innerHTML=`<div class="fb ${ok?"ok":"no"}">${ok?"Benar":"Salah. Jawaban yang benar: "+L[bad[q.id]]+". "+esc(q.o[bad[q.id]])}</div>`});
+  const msg=d.pct>=80?"Sangat baik, pemahamanmu sudah kuat.":d.pct>=60?"Cukup baik. Baca ulang bagian yang masih salah.":"Perlu belajar lagi. Baca ulang panduannya lalu coba lagi.";
+  const r=$("#res");r.style.display="block";
+  r.innerHTML=`<div>Nilai ${esc(NAME)}</div><div class="n">${d.pct}</div><p>${d.ok} dari ${d.total} soal benar. ${msg}</p><p><b>Peringkat teratas (${d.total} soal)</b></p><ol id="top">${d.top.map(t=>`<li><span>${esc(t.name)}</span><b>${t.pct}</b></li>`).join("")}</ol><button class="g" id="rs">Main lagi</button>`;
+  $("#rs").onclick=()=>{r.style.display="none";$("#quiz").hidden=true;$("#st").hidden=false;$("#go").disabled=false;scrollTo({top:0})};
+  r.scrollIntoView({behavior:"smooth",block:"start"});
+ }catch(x){$("#warn").textContent=x.message;$("#go").disabled=false}
+};
+</script>
+</body>
+</html>
